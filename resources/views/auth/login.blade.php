@@ -6,7 +6,7 @@
             <div class="col-md-8">
                 <div class="login-box card">
                     <div class="login-header card-header mx-auto">{{ __('messages.Login') }}</div>
-
+                    <p class="text-center">※ 新規さんは<a href="{{ url('register') }}">こっちから</a>登録してやー</p>
                     <div class="login-body card-body">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
