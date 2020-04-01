@@ -79,7 +79,12 @@ class TaskController extends Controller
         $history = new History;
         $history->task_id = $task->id;
         $history->edited_at = Carbon::now();
+        $history->changer = $task->changer;
         $history->save();
+        
+        if ($task->status == "done") {
+            return redirect('admin/task/finish');
+        } 
 
         return redirect('admin/task');
   }

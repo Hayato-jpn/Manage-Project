@@ -33,7 +33,7 @@
                 <div class="container">
                     <a class="navbar-brand" href="{{ url('top') }}">
                         <!--{{ config('app.name', 'なんか、プロジェクト系まとめるやつ。') }}-->
-                        「件名：なんか、プロジェクト系まとめるやつ。」
+                        「件名：なんか、タスクまとめるやつ。プロジェクト単位」
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>

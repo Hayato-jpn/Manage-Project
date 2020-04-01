@@ -12,11 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('top');
 });
 
 Route::get('top', function () {
     return view('top');
+});
+
+Route::get('goodbye', function () {
+    return view('goodbye');
 });
 
 Route::group(['prefix' => 'admin'], function() {

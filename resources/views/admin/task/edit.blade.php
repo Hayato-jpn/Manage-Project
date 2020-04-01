@@ -29,13 +29,19 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="body">〆切</label>
                         <div class="col-md-10">
-                            <input type="date" class="form-control" name="deadline" value="{{ old('deadline', \Carbon\Carbon::now()->format('Y-m-d')) }}">
+                            <input type="date" class="form-control" name="deadline" value="{{ $task_form->deadline, \Carbon\Carbon::now()->format('Y-m-d') }}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="body">担当者</label>
+                        <label class="col-md-2" for="body">作業担当者</label>
                         <div class="col-md-10">
                             <input type="text" class="form-control" name="person" value="{{ $task_form->person }}">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2" for="body">更新者</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="changer" value="{{ old('changer') }}">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -52,6 +58,7 @@
                         <ul class="list-group">
                             @if ($task_form->histories != NULL)
                                 @foreach ($task_form->histories as $history)
+                                    <li class="list-group-item">更新者：{{ $history->changer }}</li>
                                     <li class="list-group-item">{{ $history->edited_at }}</li>
                                 @endforeach
                             @endif

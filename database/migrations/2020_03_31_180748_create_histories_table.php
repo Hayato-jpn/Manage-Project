@@ -17,7 +17,7 @@ class CreateHistoriesTable extends Migration
             $table->bigIncrements('id');
             $table->integer('task_id');
             $table->string('edited_at');
-            
+            $table->string('changer')->nullable();
             $table->timestamps();
         });
     }

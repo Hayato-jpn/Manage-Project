@@ -39,6 +39,6 @@ class LoginController extends Controller
     }
     
     protected function loggedOut(Request $request) {
-        return view('top');
+        return view('goodbye');
     }
 }
