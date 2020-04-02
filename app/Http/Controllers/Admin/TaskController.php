@@ -95,7 +95,7 @@ class TaskController extends Controller
         // 削除する
         $task->delete();
         
-        return redirect('admin/task');
+        return redirect('admin/task/finish');
   }
   
     public function finish(Request $request) {
