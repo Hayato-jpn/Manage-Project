@@ -58,7 +58,7 @@
                         <ul class="list-group">
                             @if ($task_form->histories != NULL)
                                 @foreach ($task_form->histories as $history)
-                                    <li class="list-group-item">更新者: {{ $history->changer }}</li>
+                                    <li class="list-group-item">更新者：{{ $history->changer }}</li>
                                     <li class="list-group-item">{{ $history->edited_at }}</li>
                                 @endforeach
                             @endif
